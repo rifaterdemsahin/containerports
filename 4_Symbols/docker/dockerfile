@@ -26,4 +26,4 @@
  ENV NAME World
 
  # Start Nginx and your Python app
- CMD service nginx start && python app.py
+ CMD nginx -g 'daemon off;' & python app.py
