@@ -31,9 +31,11 @@ https://stunning-space-palm-tree-6w5jqx74q5fr4q5-90.app.github.dev/
 Here is an example of building and running a Docker image:
 ```sh
 # Build the image
-docker build -t myapp:latest .
+docker build -t porttester:latest .
 
 # Run the container
-docker run -d -p 8080:80 --name myapp_container myapp:latest
+docker run -d -p 90:8080 --name porttester_ins6 porttester:latest
 ```
 In this example, the Docker image is named `myapp` with the `latest` tag, and the container is named `myapp_container`. The container's port 80 is mapped to port 8080 on the host machine.
+
+
