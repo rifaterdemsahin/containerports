@@ -14,9 +14,18 @@ To run a Docker container from the built image, use the following command:
 ```sh
 docker run -d -p <host_port>:<container_port> --name <container_name> <image_name>:<tag>
 
-docker run -d -p 90:9090 --name porttester porttester:latest
+>>>>>>>>>>> 90 should not matter >>>> right handside destionation port (isntance1) easier naming
+docker run -d -p 90:9090 --name porttester_ins1 porttester:latest
 ```
 Replace `<host_port>` with the port on your host machine, `<container_port>` with the port inside the container, `<container_name>` with your desired container name, and `<image_name>:<tag>` with the name and tag of your image.
+
+@rifaterdemsahin ➜ /workspaces/containerports/4_Symbols/docker (main) $ docker ps
+CONTAINER ID   IMAGE               COMMAND           CREATED         STATUS         PORTS                                                              NAMES
+550d6d0c2d5f   porttester:latest   "python app.py"   7 seconds ago   Up 6 seconds   80/tcp, 443/tcp, 8080/tcp, 0.0.0.0:90->9090/tcp, :::90->9090/tcp   porttester_ins1
+@rifaterdemsahin ➜ /workspaces/containerports/4_Symbols/docker (main) $ 
+
+https://stunning-space-palm-tree-6w5jqx74q5fr4q5-90.app.github.dev/
+>>>> empyty page opens up
 
 ## Example
 Here is an example of building and running a Docker image:
